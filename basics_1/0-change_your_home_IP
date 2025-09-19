@@ -1,0 +1,12 @@
+#!/bin/bash
+# Script: 0-change_your_home_IP
+# Description: Reconfigure localhost and facebook.com resolution
+
+# Backup /etc/hosts before changes
+cp /etc/hosts /etc/hosts.bak
+
+# Overwrite /etc/hosts with required entries
+cat <<EOF > /etc/hosts
+127.0.0.2   localhost
+8.8.8.8     facebook.com
+EOF
