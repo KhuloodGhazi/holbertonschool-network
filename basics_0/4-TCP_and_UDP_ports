@@ -1,5 +1,3 @@
-#!/bin/bash
-# Script: 4-TCP_and_UDP_ports
-# Description: Display listening TCP and UDP ports with PID and program name
-
-sudo ss -tulnp
+#!/usr/bin/env bash
+# Bash script that display listening ports with PID and program names for listening sockets.
+netstat -a -p
