@@ -1,9 +1,10 @@
-#!/bin/bash
-# Safer version: append to /etc/hosts instead of overwriting
+#!/usr/bin/env bash
+# This script configures /etc/hosts so localhost resolves to 127.0.0.2 and facebook.com resolves to 8.8.8.8
 
+# Backup current hosts file
 cp /etc/hosts /etc/hosts.bak
 
-# Remove existing entries for localhost and facebook.com if they exist
+# Remove any existing entries for localhost and facebook.com
 sed -i '/localhost/d' /etc/hosts
 sed -i '/facebook.com/d' /etc/hosts
 
