@@ -5,8 +5,8 @@
 cp /etc/hosts /etc/hosts.bak
 
 # Remove existing entries for localhost and facebook.com
-sed -i '/localhost/d' /etc/hosts
-sed -i '/facebook.com/d' /etc/hosts
+sed -i '/localhost/d' /etc/hosts 2>/dev/null || true
+sed -i '/facebook.com/d' /etc/hosts 2>/dev/null || true
 
 # Add the required entries
 echo "127.0.0.2   localhost" >> /etc/hosts
