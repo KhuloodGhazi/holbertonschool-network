@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# This script displays active listening TCP and UDP sockets with PID and program name
+# This script displays listening TCP and UDP ports with PID and program name
 
-# Only listening sockets with PID/Program name
 netstat -tulnp
+
